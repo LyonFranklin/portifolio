@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 :root{
-    --header-height: ;
+    --header-height: 3rem ;
 
     /* Palheta de Cores */
 
@@ -148,16 +148,16 @@ img{
     gap: 1.5rem;
 }
 .header{
+    top: 0;
     width: 100%;
     position: fixed;
-    bottom: 0;
     left: 0;
     z-index: var(--z-fixed);
     background-color: var(--first-color-alt);
 }
 /* ============ NAV =========== */
 .nav{
-    max-width: 968px;
+    max-width: 1024px;
     height: var(--header-height);
     display: flex;
     justify-content: space-between;
@@ -181,12 +181,13 @@ img{
 @media screen and (max-width: 767px){
     .nav_menu{
         position: fixed;
-        background-color: rgb(255, 12, 12);
-        bottom: -100%;
+        top: var(--header-height);
+        bottom:100%;
         left: 0;
-        width: 100%;          
-        padding: 2rem 1.5rem 4rem;
-        box-shadow:0 -1px 4px rgba(0, 0, 0, 0.952); 
+        width: 100%;      
+        background-color: var(--body-color);                 
+        padding: 4rem 4rem;
+        box-shadow:1px -1px 1px rgba(0, 0, 0, 0.952); 
         border-radius: 1.5rem 1.5rem 0 0;
         transition: .3s;   
     }
@@ -203,7 +204,7 @@ img{
         font-weight: var(--font-medium);
     }
     .nav_link:hover{
-        color: #fa5806;
+        color: var(--first-color);
     }
     .nav_icon{
         font-size: 1.2rem;
@@ -222,7 +223,7 @@ img{
 }
 /* ============ Exibir Menu =========== */
 .show-menu{
-    bottom: 0;
+    bottom:0 ;
 }
 /* ============ HOME =========== */
 /* ============ HOME =========== */
@@ -250,6 +251,7 @@ img{
     width: 200px;
     fill: var(--first-color);
 }
+
 /* 
 .home_blob_img{
     width: 170px;
@@ -365,6 +367,10 @@ img{
     color: var(--first-color);
     margin-right: var(--mb-0-25);
 }
+.qualificacao_icon{
+    font-size: 1.8rem;
+    margin-right: var(--mb-0-25);
+}
 .qualificacao_data{
     display: grid;
     grid-template-columns: 1fr max-content 1fr;
@@ -373,7 +379,6 @@ img{
 .qualificacao_title{
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
-
 }
 
 /* ============ Projeto =========== */

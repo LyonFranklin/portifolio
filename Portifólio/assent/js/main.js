@@ -1,26 +1,26 @@
 /* Exibir Menu */
- const navMenu = document.getElementById('nav-menu'),
-    navToggle = document.getElementById('nav-toggle'),
-    navClose = document.getElementById('nav-close')
+const navMenu = document.getElementById('nav-menu'),
+  navToggle = document.getElementById('nav-toggle'),
+  navClose = document.getElementById('nav-close')
 
 if(navToggle){
-    navToggle.addEventListener('click', () =>{
-        navMenu.classList.add('show-menu')
-    })    
+  navToggle.addEventListener('click', () =>{
+      navMenu.classList.add('show-menu')
+  })    
 }
 if (navClose){
-    navClose.addEventListener('click',( ) =>{
-        navMenu.classList.remove('show-menu')
-    })
+  navClose.addEventListener('click',( ) =>{
+      navMenu.classList.remove('show-menu')
+  })
 }
 /* Remover menu mobile */
-const navLink = document.getElementById('nav_link')
+const navLink = document.querySelectorAll('nav_link')
 
 function linkAction(){
-    const navMenu = document.getElementById('nav-menu')
-    navMenu.classList.remove('show-menu')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
+      const navMenu = document.getElementById('nav-menu')
+      navMenu.classList.remove('show-menu')
+  }
+  navLink.forEach(n => n.addEventListener('click', linkAction))
 
 /* Slides */
 let swiper = new Swiper(".projeto_container", {
